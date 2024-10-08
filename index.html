@@ -1,0 +1,297 @@
+<!--
+ Steve Weis
+ Old Dominion University
+ CS 312 - Internet Concepts
+ Assignment 2, 9/22/2024
+-->
+
+<!--
+ NOTE:
+ When making a new document (in Notepad) save as:
+ "All Files" & "ANSI"
+ include ".html" at the end of the fil name
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<title>Epsilon 3</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+</style>
+
+</head>
+
+
+<body>
+
+<div class="header">
+  <p class="epshead">EPSILON 3</p>
+  <p class="epssubhead">The Ultimate Human Habitat</p>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#options">Packages</a>
+    <a href="#prices">Prices</a>
+  </nav>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="intro">
+    <p class="intro-text">Calling all aliens!</br>
+      Immerse yourself in the modern human habitat.</br>
+      Your intergalactic vacation awaits in the new and improved Epsilon 3!
+    </p>
+  </div>
+
+
+  <section id="features">
+
+    <h2>HOUSE FEATURES</h2>
+
+    <div class="feature">
+      <i class="fas fa-building"></i>
+      <p class="epsbody1">
+        <strong>Now with <em>TWO</em> floors!</strong></br>
+        Now with TWO floors!  Experience the thrill of altitude by
+        being able to climb to a second floor and view the neighborhood.
+        Look at the squirrels and birds in the trees.
+      </p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-door-open"></i>
+      <p class="epsbody1">
+        <strong>Front <em>AND</em> Back Doors!</strong></br>
+        Enjoy the convenience of not one, but two doors!  Each allow a user to
+        enter and exit through both.
+      </p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-utensils"></i>
+      <p class="epsbody1">
+        <strong>Charming Kitchen to Cook <em>"Tacos"</em></strong></br>
+        Whip up your favorite alien delicacies or enjoy the earthly cuisine in the fully
+        stocked kitchen.  Including all the essentials: a refrigerator that hums with delite,
+        a stove and microwave to make things hot and painful before eating.
+      </p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-couch"></i>
+      <p class="epsbody1">
+        <strong>Cozy Living Space</strong></br>
+        Sink into the couch that was most certainly a family heirloom!  Enjoy the furniture 
+        made from a deceased tree that has been cut into small peices and reaasembled.
+        Pretend to be human as you rearrange furniture in the middle of the night and argue 
+        about the placement of the ottoman.  Just like in human's apartments!
+      </p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-bath"></i>
+      <p class="epsbody1">
+        <strong>Lavish Restrooms</strong></br>
+        This is pretty straightforward.  They're the same as the ones throughout Gloop Glorp.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- SLIDESHOW GALLERY -->
+  <div class="slideshow-container">
+    <div class="slides">
+      <img src="slideshow1.png" style="width:100%">
+      <div class="text">Exterior</div>
+    </div>
+    <div class="slides">
+      <img src="slideshow2.png" style="width:100%">
+      <div class="text">Room for the Living</div>
+    </div>
+    <div class="slides">
+      <img src="slideshow3.png" style="width:100%">
+      <div class="text">Kitchen</div>
+    </div>
+    <div class="slides">
+      <img src="slideshow4.png" style="width:100%">
+      <div class="text">Bathroom</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+  </div>
+
+    
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("slides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+    // Automatic slideshow
+    setInterval(function() {
+      plusSlides(1);
+    }, 3000);
+</script>
+
+
+  <!-- OPTIONS / PACKAGES -->
+<section id="options">
+
+  <div class="packages-section">
+    <h2>AVAILABLE PACKAGES</h2>
+
+    <div class="packages-container">
+      <div class="package">
+        <img src="package1.png" alt="Basic Stay Package" class="package-image">
+        <div class="package-info">
+          <h3>Basic Stay</h3>
+          <p>Get a taste of human life with a cozy stay in Epsilon 3.  
+            Includes access to all basic amenities and a complimentary 
+            “Welcome to Earth” kit with snacks!</p>
+        </div>
+      </div>
+      <div class="package">
+        <img src="package2.png" alt="Deluxe XP Package" class="package-image">
+        <div class="package-info">
+          <h3>Deluxe XP</h3>
+          <p>Everything in the Basic Stay package, plus a guided tour of a McDonald's.</p>
+        </div>
+      </div>
+      <div class="package">
+        <img src="package3.png" alt="Earthling Experience Package" class="package-image">
+        <div class="package-info">
+          <h3>Earthling Experience</h3>
+          <p>All features from the Deluxe XP package, plus unlimited access during your stay to what used to be a
+            real humans' "junk drawer."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRICES -->
+    <div class="interestform" id="prices">
+      <h2>PRICES</h2>
+      <div class="price-item">
+        <p class="epsbody1"><strong>Basic Stay - <em>$299/night:</em></strong></br>
+          <strong>Special Offer:</strong> Book for 3 nights and get a 10% discount.</p>
+      </div>
+
+      <div class="price-item">
+        <p class="epsbody1"><strong>Deluxe XP - <em>$499/night:</em></strong></br>
+          <strong>Seasonal Discount:</strong> Enjoy a 15% discount during the summer months.</p>
+      </div>
+
+      <div class="price-item">
+        <p class="epsbody1"><strong>Earthling Experience - <em>$749/night:</em></strong></br>
+          <strong>Additional Perks:</strong> Complimentary breakfast and a souvenir from the junk drawer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEREST FORM -->
+  <div class="interestform">
+    <h2>INTEREST FORM</h2>
+    <p>Please fill out the form below to get more information and be connected with 
+      one of our Destinations Specialists
+    </p>
+    <form action="/action_page.php" method="POST" id="interestform">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+
+      <label for="quadrant">Galactic Quadrant</label>
+      <select id="quadrant" name="quadrant" required>
+        <option value="Gleep">Gleep Glorp</option>
+        <option value="Beep">Beep Bop</option>
+        <option value="Ko">Koooorg</option>
+        <option value="Carl">Carl</option>
+      </select>
+
+      <label for="g-email">Galactic Email:</label>
+      <input type="text" id="g-email" name="g-email" placeholder="Your Galactic Email..." required>
+
+      <label for="dpad">Datapad ID:</label>
+      <input type="text" id="dpad" name="datapadid" placeholder="Your Datapad ID..." required>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+
+  <!-- DOWNLOAD WAIVER -->
+
+  <div class="updownload">
+    <center><h1>DOWNLOAD APPLICATION</h1></center>
+    <a href="files/epsilon3app.pdf" download="epsilon3app" class="download-button">Download Waiver</a>
+  </div>
+
+  <!-- UPLOAD APPLICATION -->
+<div class="upload-application">
+  <div class="updownload">
+    <center><h1>UPLOAD APPLICATION</h1></center>
+    <form action="upload.php" method="post" enctype="multipart/form-data" id="waiverForm">
+      <label for="fileUpload">Browse for your application file:</label>
+      <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx" required>
+      <input type="submit" value="Upload Application">
+      <p id="feedback" style="display:none;"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.getElementById('fileUpload').addEventListener('submit', function(event) {
+    var fileInput = document.getElementById('fileUpload');
+    var feedback = document.getElementById('feedback');
+
+    if (!fileInput.value) {
+      event.preventDefault();
+      feedback.style.display = 'block';
+      feedback.style.color = 'red';
+      feedback.textContent = 'Please select a file to upload.';
+    } else {
+      feedback.style.display = 'block';
+      feedback.style.color = 'green';
+      feedback.textContent = 'File uploaded successfully!';
+    }
+  });
+</script>
+
+  
+
+
+</div>
+
+<div class="footer">
+  <p>Contact Information: We'll contact you.</p>
+</div>
+
+</body>
+</html> 
