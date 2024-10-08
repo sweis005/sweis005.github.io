@@ -219,7 +219,7 @@
     <p>Please fill out the form below to get more information and be connected with 
       one of our Destinations Specialists
     </p>
-    <form action="/action_page.php" method="POST" id="interestform">
+    <form action="/upload.php" method="POST" id="interestform">
       <label for="fname">First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
 
@@ -257,7 +257,7 @@
 <div class="upload-application">
   <div class="updownload">
     <center><h1>UPLOAD APPLICATION</h1></center>
-    <form action="upload.php" method="post" enctype="multipart/form-data" id="waiverForm">
+    <form action="/action_page.php" method="post" enctype="multipart/form-data" id="waiverForm">
       <label for="fileUpload">Browse for your application file:</label>
       <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx" required>
       <input type="submit" value="Upload Application">
@@ -267,7 +267,7 @@
 </div>
 
 <script>
-  document.getElementById('fileUpload').addEventListener('submit', function(event) {
+  document.getElementById('waiverForm').addEventListener('submit', function(event) {
     var fileInput = document.getElementById('fileUpload');
     var feedback = document.getElementById('feedback');
 
